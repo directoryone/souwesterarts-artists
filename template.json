@@ -1,0 +1,88 @@
+{
+  "directoryConfig": {
+    "name": "Artist Directory",
+    "tagline": "Discover Talented Artists",
+    "listingNounSingular": "Artist",
+    "listingNounPlural": "Artists",
+    "requireApproval": false,
+    "reviewsEnabled": true,
+    "maxListingPhotos": 30,
+    "maxListingsPerUser": 3,
+    "locationRequired": false,
+    "emailConfig": {
+      "senderName": "Artist Directory",
+      "senderEmail": "noreply@your-domain.com"
+    },
+    "heroLayout": "collage",
+    "cardDisplayFields": ["tagline", "categories", "rating"],
+    "jobsBoardEnabled": true,
+    "eventsBoardEnabled": true,
+    "caseStudiesEnabled": true,
+    "caseStudiesRequireApproval": false,
+    "caseStudiesPath": "case-studies",
+    "claimFeeEnabled": false,
+    "submissionsEnabled": true,
+    "channelsEnabled": false,
+    "listingTypesEnabled": false,
+    "serviceFocusEnabled": false,
+    "industriesEnabled": true,
+    "toolsEnabled": false,
+    "citiesPageEnabled": false,
+    "categoryUrlPrefix": null,
+    "aiScanEnabled": false,
+    "aiBannerPickEnabled": false,
+    "aiProvider": null,
+    "aiApiKeyEncrypted": null,
+    "bulkImportEnabled": false,
+    "indexNowKey": null,
+    "platformVersion": "1.0.0"
+  },
+  "categories": [
+    { "name": "Painting", "slug": "painting", "icon": "🎨", "sortOrder": 0 },
+    { "name": "Sculpture", "slug": "sculpture", "icon": "🗿", "sortOrder": 1 },
+    { "name": "Photography", "slug": "photography", "icon": "📷", "sortOrder": 2 },
+    { "name": "Digital Art", "slug": "digital-art", "icon": "🖥️", "sortOrder": 3 },
+    { "name": "Illustration", "slug": "illustration", "icon": "✏️", "sortOrder": 4 },
+    { "name": "Mixed Media", "slug": "mixed-media", "icon": "🎭", "sortOrder": 5 },
+    { "name": "Ceramics", "slug": "ceramics", "icon": "🏺", "sortOrder": 6 },
+    { "name": "Textile Art", "slug": "textile-art", "icon": "🧵", "sortOrder": 7 }
+  ],
+  "fieldDefinitions": [
+    {
+      "fieldKey": "medium",
+      "label": "Primary Medium",
+      "fieldType": "multi_select",
+      "options": ["Oil", "Acrylic", "Watercolor", "Digital", "Clay", "Metal", "Wood", "Textile", "Mixed"],
+      "showInCard": true,
+      "showInFilter": true,
+      "displayLocation": "overview",
+      "sortOrder": 0
+    },
+    {
+      "fieldKey": "available_for_commission",
+      "label": "Available for Commissions",
+      "fieldType": "boolean",
+      "showInCard": true,
+      "showInFilter": true,
+      "displayLocation": "sidebar",
+      "sortOrder": 1
+    },
+    {
+      "fieldKey": "exhibition_history",
+      "label": "Exhibition History",
+      "fieldType": "textarea",
+      "displayLocation": "overview",
+      "sortOrder": 2
+    }
+  ],
+  "certifications": [
+    { "name": "MFA Graduate", "slug": "mfa-graduate", "icon": "🎓", "sortOrder": 0 },
+    { "name": "Gallery Represented", "slug": "gallery-represented", "icon": "🖼️", "sortOrder": 1 },
+    { "name": "Arts Council Member", "slug": "arts-council-member", "icon": "🏛️", "sortOrder": 2 }
+  ],
+  "reviewCriteria": [
+    { "name": "Artistry", "description": "Creative quality and originality", "weight": "1.5", "maxScore": 5, "sortOrder": 0 },
+    { "name": "Communication", "description": "Responsiveness and professionalism", "weight": "1", "maxScore": 5, "sortOrder": 1 },
+    { "name": "Value", "description": "Fair pricing for the work", "weight": "1", "maxScore": 5, "sortOrder": 2 }
+  ]
+}
