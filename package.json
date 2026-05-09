@@ -13,9 +13,9 @@
     "update": "bash update.sh"
   },
   "dependencies": {
-    "@directoryone/app": "^1.0.515",
-    "@directoryone/core": "^1.0.515",
-    "@directoryone/ui": "^1.0.515",
+    "@directoryone/app": "^1.0.516",
+    "@directoryone/core": "^1.0.516",
+    "@directoryone/ui": "^1.0.516",
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.98.0",
     "drizzle-orm": "0.45.2",
