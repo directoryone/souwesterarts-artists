@@ -9,14 +9,14 @@ importers:
   .:
     dependencies:
       '@directoryone/app':
-        specifier: ^1.0.611
-        version: 1.0.611(next@15.5.15(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(postgres@3.4.9)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+        specifier: ^1.0.612
+        version: 1.0.612(next@15.5.15(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(postgres@3.4.9)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       '@directoryone/core':
         specifier: ^1.0.612
         version: 1.0.612(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       '@directoryone/ui':
-        specifier: ^1.0.611
-        version: 1.0.611(next@15.5.15(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+        specifier: ^1.0.612
+        version: 1.0.612(next@15.5.15(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       '@supabase/ssr':
         specifier: ^0.6.1
         version: 0.6.1(@supabase/supabase-js@2.105.4)
@@ -95,21 +95,18 @@ packages:
     resolution: {integrity: sha512-JiDShH45zKHWyGe4ZNVRrCjBz8Nh9TMmZG1kh4QTK8hCBTWBi8Da+i7s1fJw7/lYpM4ccepSNfqzZ/QvABBi5g==}
     engines: {node: '>=6.9.0'}
 
-  '@directoryone/app@1.0.611':
-    resolution: {integrity: sha512-aHvFXM2Nj4+XcVcRVrNiiPTtdJZ2gka+IRqx9vqLbiSX3jT3aZSLcqhoYVqBL0WAtUijTindFaesjBtHWq+eUA==, tarball: https://npm.pkg.github.com/download/@directoryone/app/1.0.611/66cfaa0157c00c25aee31ce2c2cb13776ac45b3b}
+  '@directoryone/app@1.0.612':
+    resolution: {integrity: sha512-NUg5UUoDGTASPEexm9hKGYAy1qiQkXMS+7B++hchjbSwvUJ9RuWhAI2gxRc5XFxqTxB7KnT3+kYbAZirBWm9YA==, tarball: https://npm.pkg.github.com/download/@directoryone/app/1.0.612/3230fc8a88ddcf1dd837678364c47f149618d617}
     peerDependencies:
       next: '>=15.0.0'
       react: ^19.0.0
       react-dom: ^19.0.0
 
-  '@directoryone/core@1.0.611':
-    resolution: {integrity: sha512-8wt7Tpx5GanX2kLnSOsJeB60bhMP9DF4gqavvf3hj0lOAIKTW9tqsskUnaKBwoV2Dc3/46SrF78eqxygYK4w6g==, tarball: https://npm.pkg.github.com/download/@directoryone/core/1.0.611/df7e39bb6224600b2802a4cddd88193ad0e3f403}
-
   '@directoryone/core@1.0.612':
     resolution: {integrity: sha512-HB5Vk74DjXJ3rlQNzS3SwzDqRXA3+w6i0C8alwhwU90jRpLtkPn7MIlUYSZoEA0uVcGRbieb0sep5wPUCINrjA==, tarball: https://npm.pkg.github.com/download/@directoryone/core/1.0.612/76bb8757ff1863b3441ed81f4f15f490d1efb73e}
 
-  '@directoryone/ui@1.0.611':
-    resolution: {integrity: sha512-KVubv/S0c09uYyEPLv4UzmCYRoUABGjaTZrDLGmKWJCXt0G9xk/sDFPhoe0HvQEPFlh46kJD+jxZyJEU873eQw==, tarball: https://npm.pkg.github.com/download/@directoryone/ui/1.0.611/8ba7fb2ed59f72ecaceed8590c4a8eb9c60cfe62}
+  '@directoryone/ui@1.0.612':
+    resolution: {integrity: sha512-4nOsZBGk+fPCGfr0sCDDviSxfjgtlBWNw0zQXUYxgMyn3FKNyytEINOEJ6BATty5vvltmStt9gBAu0FVt1lTvA==, tarball: https://npm.pkg.github.com/download/@directoryone/ui/1.0.612/02d0c57e82c8ccaf6b14fa86631b8c0f9c2992a7}
     peerDependencies:
       next: '>=15.0.0'
       react: ^19.0.0
@@ -983,9 +980,6 @@ packages:
   csstype@3.2.3:
     resolution: {integrity: sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ==}
 
-  dayjs@1.11.20:
-    resolution: {integrity: sha512-YbwwqR/uYpeoP4pu043q+LTDLFBLApUP6VxRihdfNTqu4ubqMlGDLd6ErXhEgsyvY0K6nCs7nggYumAN+9uEuQ==}
-
   deepmerge@4.3.1:
     resolution: {integrity: sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A==}
     engines: {node: '>=0.10.0'}
@@ -1198,9 +1192,6 @@ packages:
     resolution: {integrity: sha512-+DWg8jCJG2TEnpy7kOm/7/AxaYoaRbjVB4LFZLySZlWn8exGs3A4OLJR966cVvU26N7X9TWxl+Jsw7dzAqKT6g==}
     engines: {node: '>=16'}
 
-  launder@1.7.1:
-    resolution: {integrity: sha512-mU6WRz5EusL9ZZuiZ5SO4Y6C0P9PAUR9iwdb6bzj4KDihm28DiHFw+/yk9DBH4f+Pv1wuzQ4e2jV3oQ7mkIqvw==}
-
   leac@0.6.0:
     resolution: {integrity: sha512-y+SqErxb8h7nE/fiEX07jsbuhrpO9lL8eca7/Y1nuWV2moNlXhyd59iDGcRf6moVyDMbmTNzL40SUyrFU/yDpg==}
 
@@ -1326,18 +1317,6 @@ packages:
       zod:
         optional: true
 
-  openai@6.38.0:
-    resolution: {integrity: sha512-AoMplt2UalrpgUDMh3L09QWjNRlgJPipclQvA6sYAaeF6nHNBMgmikAZGmcYLn8on4d9sQY9Q8bOLfrBS7Lc8g==}
-    hasBin: true
-    peerDependencies:
-      ws: ^8.18.0
-      zod: ^3.25 || ^4.0
-    peerDependenciesMeta:
-      ws:
-        optional: true
-      zod:
-        optional: true
-
   parse-srcset@1.0.2:
     resolution: {integrity: sha512-/2qh0lav6CmI15FzA3i/2Bzk2zCgQhGMkvhOhKNcBVQ1ldgpbfiNTVslmooUmWJcADi1f1kIeynbDRVzNlfR6Q==}
 
@@ -1411,9 +1390,6 @@ packages:
 
   sanitize-html@2.17.3:
     resolution: {integrity: sha512-Kn4srCAo2+wZyvCNKCSyB2g8RQ8IkX/gQs2uqoSRNu5t9I2qvUyAVvRDiFUVAiX3N3PNuwStY0eNr+ooBHVWEg==}
-
-  sanitize-html@2.17.4:
-    resolution: {integrity: sha512-2HW7v2ol/uAM7sX4hbD8Z59OGWmAPrvjL8E71UWlBcj6m+kcF6ilQBLny+cIgY214QJeJT5tQuxKKqX0SQqjGQ==}
 
   scheduler@0.27.0:
     resolution: {integrity: sha512-eNv+WrVbKu1f3vbYJT/xtiF5syA5HPIMtf9IgY/nKg0sWqzAUEvqY/xm7OcZc/qafLx/iO9FgOmeSAp4v5ti/Q==}
@@ -1515,10 +1491,10 @@ snapshots:
 
   '@babel/runtime@7.29.2': {}
 
-  '@directoryone/app@1.0.611(next@15.5.15(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(postgres@3.4.9)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
+  '@directoryone/app@1.0.612(next@15.5.15(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(postgres@3.4.9)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
     dependencies:
-      '@directoryone/core': 1.0.611(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
-      '@directoryone/ui': 1.0.611(next@15.5.15(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@directoryone/core': 1.0.612(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@directoryone/ui': 1.0.612(next@15.5.15(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       '@supabase/ssr': 0.6.1(@supabase/supabase-js@2.105.4)
       '@supabase/supabase-js': 2.105.4
       drizzle-orm: 0.45.2(postgres@3.4.9)
@@ -1554,53 +1530,6 @@ snapshots:
       - pg
       - postgres
       - prisma
-      - sql.js
-      - sqlite3
-      - ws
-
-  '@directoryone/core@1.0.611(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
-    dependencies:
-      '@anthropic-ai/sdk': 0.91.1(zod@3.25.76)
-      '@supabase/ssr': 0.6.1(@supabase/supabase-js@2.105.4)
-      '@supabase/supabase-js': 2.105.4
-      '@types/sanitize-html': 2.16.1
-      cheerio: 1.2.0
-      drizzle-orm: 0.45.2(postgres@3.4.9)
-      openai: 6.38.0(zod@3.25.76)
-      postgres: 3.4.9
-      resend: 4.8.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
-      sanitize-html: 2.17.4
-      slug: 9.1.0
-      zod: 3.25.76
-    transitivePeerDependencies:
-      - '@aws-sdk/client-rds-data'
-      - '@cloudflare/workers-types'
-      - '@electric-sql/pglite'
-      - '@libsql/client'
-      - '@libsql/client-wasm'
-      - '@neondatabase/serverless'
-      - '@op-engineering/op-sqlite'
-      - '@opentelemetry/api'
-      - '@planetscale/database'
-      - '@prisma/client'
-      - '@tidbcloud/serverless'
-      - '@types/better-sqlite3'
-      - '@types/pg'
-      - '@types/sql.js'
-      - '@upstash/redis'
-      - '@vercel/postgres'
-      - '@xata.io/client'
-      - better-sqlite3
-      - bun-types
-      - expo-sqlite
-      - gel
-      - knex
-      - kysely
-      - mysql2
-      - pg
-      - prisma
-      - react
-      - react-dom
       - sql.js
       - sqlite3
       - ws
@@ -1652,9 +1581,9 @@ snapshots:
       - sqlite3
       - ws
 
-  '@directoryone/ui@1.0.611(next@15.5.15(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
+  '@directoryone/ui@1.0.612(next@15.5.15(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
     dependencies:
-      '@directoryone/core': 1.0.611(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@directoryone/core': 1.0.612(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       embla-carousel-react: 8.6.0(react@19.2.6)
       leaflet: 1.9.4
       lucide-react: 0.469.0(react@19.2.6)
@@ -2279,8 +2208,6 @@ snapshots:
 
   csstype@3.2.3: {}
 
-  dayjs@1.11.20: {}
-
   deepmerge@4.3.1: {}
 
   detect-libc@2.1.2: {}
@@ -2475,10 +2402,6 @@ snapshots:
       '@babel/runtime': 7.29.2
       ts-algebra: 2.0.0
 
-  launder@1.7.1:
-    dependencies:
-      dayjs: 1.11.20
-
   leac@0.6.0: {}
 
   leaflet@1.9.4: {}
@@ -2573,10 +2496,6 @@ snapshots:
     optionalDependencies:
       zod: 3.25.76
 
-  openai@6.38.0(zod@3.25.76):
-    optionalDependencies:
-      zod: 3.25.76
-
   parse-srcset@1.0.2: {}
 
   parse5-htmlparser2-tree-adapter@7.1.0:
@@ -2657,16 +2576,6 @@ snapshots:
       escape-string-regexp: 4.0.0
       htmlparser2: 10.1.0
       is-plain-object: 5.0.0
-      parse-srcset: 1.0.2
-      postcss: 8.5.14
-
-  sanitize-html@2.17.4:
-    dependencies:
-      deepmerge: 4.3.1
-      escape-string-regexp: 4.0.0
-      htmlparser2: 10.1.0
-      is-plain-object: 5.0.0
-      launder: 1.7.1
       parse-srcset: 1.0.2
       postcss: 8.5.14
 
