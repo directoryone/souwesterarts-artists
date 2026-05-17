@@ -9,14 +9,14 @@ importers:
   .:
     dependencies:
       '@directoryone/app':
-        specifier: ^1.0.620
-        version: 1.0.620(next@15.5.15(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(postgres@3.4.9)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+        specifier: ^1.0.621
+        version: 1.0.621(next@15.5.15(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(postgres@3.4.9)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       '@directoryone/core':
-        specifier: ^1.0.620
-        version: 1.0.620(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+        specifier: ^1.0.621
+        version: 1.0.621(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       '@directoryone/ui':
-        specifier: ^1.0.620
-        version: 1.0.620(next@15.5.15(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+        specifier: ^1.0.621
+        version: 1.0.621(next@15.5.15(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       '@supabase/ssr':
         specifier: ^0.6.1
         version: 0.6.1(@supabase/supabase-js@2.105.4)
@@ -95,18 +95,18 @@ packages:
     resolution: {integrity: sha512-JiDShH45zKHWyGe4ZNVRrCjBz8Nh9TMmZG1kh4QTK8hCBTWBi8Da+i7s1fJw7/lYpM4ccepSNfqzZ/QvABBi5g==}
     engines: {node: '>=6.9.0'}
 
-  '@directoryone/app@1.0.620':
-    resolution: {integrity: sha512-xJXhl9oeIXppn1HxszfDqYU4QDdewAhWj5lw4v+XGwzrBOrqiz07J3howg5ptGdDuufmR4F992M/aPKRK5B6Kw==, tarball: https://npm.pkg.github.com/download/@directoryone/app/1.0.620/a239fc99243213f98586d0fe4a5345985def67f6}
+  '@directoryone/app@1.0.621':
+    resolution: {integrity: sha512-jTvNu0ynJDICbfb8IQysirgO7bLPa6rY1xSNszCdukqh7WlsIcPcK6cDnzzC0VZcQTCkEme9RQjvAMyMFQh/Nw==, tarball: https://npm.pkg.github.com/download/@directoryone/app/1.0.621/6283bb9d2345ea41bab8e7253fa6b3bd71852b48}
     peerDependencies:
       next: '>=15.0.0'
       react: ^19.0.0
       react-dom: ^19.0.0
 
-  '@directoryone/core@1.0.620':
-    resolution: {integrity: sha512-zOurrT+VfBRLx9c2su83mKsEbvRf+pq3hyDjDoCEBf2SNu0DxWGLMK8U9YZpui0+nrJITJxR7NC5oudJh5JYFQ==, tarball: https://npm.pkg.github.com/download/@directoryone/core/1.0.620/8ec1e4d58b2414e6eb23ac7dfead9e24b05870ff}
+  '@directoryone/core@1.0.621':
+    resolution: {integrity: sha512-Xe/gTbAnj8DC/VmDrYHIvhW2UlChBE07v59jQCubuRoaz2e0HJB18+CCbFBWv1JKRCgNDe5Iz+cKWcYOU1OmTw==, tarball: https://npm.pkg.github.com/download/@directoryone/core/1.0.621/b97ecc6b6c138643f3b215b3c19eacee4173f6a4}
 
-  '@directoryone/ui@1.0.620':
-    resolution: {integrity: sha512-K7u/nabMsbq995WVJA+X1AQWlZ43rnonBv4Muuo0fUfa5a7vVKYn7fbg+c3Mlf92ndlj685Gw1jztqDCxjkh8Q==, tarball: https://npm.pkg.github.com/download/@directoryone/ui/1.0.620/ca644537c82c8b9984d71f9b788a1412e4893bef}
+  '@directoryone/ui@1.0.621':
+    resolution: {integrity: sha512-JBu/0TGYpeCAeL8JKiYZqTBeW4Lr7K3BarMe0EDFTTHwHkUgDKTZq8MX8aZKY30eEjEjSmADJP4CKkEDb5tJnQ==, tarball: https://npm.pkg.github.com/download/@directoryone/ui/1.0.621/a139479a6f489fe9ee439bc845b87d3712d8c2eb}
     peerDependencies:
       next: '>=15.0.0'
       react: ^19.0.0
@@ -1491,10 +1491,10 @@ snapshots:
 
   '@babel/runtime@7.29.2': {}
 
-  '@directoryone/app@1.0.620(next@15.5.15(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(postgres@3.4.9)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
+  '@directoryone/app@1.0.621(next@15.5.15(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(postgres@3.4.9)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
     dependencies:
-      '@directoryone/core': 1.0.620(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
-      '@directoryone/ui': 1.0.620(next@15.5.15(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@directoryone/core': 1.0.621(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@directoryone/ui': 1.0.621(next@15.5.15(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       '@supabase/ssr': 0.6.1(@supabase/supabase-js@2.105.4)
       '@supabase/supabase-js': 2.105.4
       drizzle-orm: 0.45.2(postgres@3.4.9)
@@ -1534,7 +1534,7 @@ snapshots:
       - sqlite3
       - ws
 
-  '@directoryone/core@1.0.620(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
+  '@directoryone/core@1.0.621(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
     dependencies:
       '@anthropic-ai/sdk': 0.91.1(zod@3.25.76)
       '@supabase/ssr': 0.6.1(@supabase/supabase-js@2.105.4)
@@ -1581,9 +1581,9 @@ snapshots:
       - sqlite3
       - ws
 
-  '@directoryone/ui@1.0.620(next@15.5.15(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
+  '@directoryone/ui@1.0.621(next@15.5.15(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
     dependencies:
-      '@directoryone/core': 1.0.620(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@directoryone/core': 1.0.621(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       embla-carousel-react: 8.6.0(react@19.2.6)
       leaflet: 1.9.4
       lucide-react: 0.469.0(react@19.2.6)
