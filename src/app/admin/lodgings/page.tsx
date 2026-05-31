@@ -1,1 +1,1 @@
-export { default, metadata } from "@directoryone/app/routes/admin/lodgings";
+export { default } from "@directoryone/app/routes/admin/lodgings";
