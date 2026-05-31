@@ -1,1 +1,1 @@
-export { default } from "@directoryone/app/routes/auth/onboarding";
+export { default, metadata } from "@directoryone/app/routes/auth/onboarding";

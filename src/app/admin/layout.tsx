@@ -1,1 +1,1 @@
-export { default } from "@directoryone/app/routes/admin/admin-layout";
+export { default, metadata } from "@directoryone/app/routes/admin/admin-layout";

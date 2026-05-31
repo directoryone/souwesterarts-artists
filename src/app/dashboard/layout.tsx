@@ -1,1 +1,1 @@
-export { default } from "@directoryone/app/routes/dashboard/dashboard-layout";
+export { default, metadata } from "@directoryone/app/routes/dashboard/dashboard-layout";
