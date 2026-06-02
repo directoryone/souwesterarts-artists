@@ -1,1 +1,1 @@
-export { default } from "@directoryone/app/routes/public/listing-detail";
+export { default, generateMetadata } from "@directoryone/app/routes/public/listing-detail";
