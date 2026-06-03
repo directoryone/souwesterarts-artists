@@ -2,7 +2,6 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   serverExternalPackages: ["sanitize-html"],
-  transpilePackages: ["@directoryone/core", "@directoryone/ui", "@directoryone/app"],
   experimental: {
     serverActions: {
       bodySizeLimit: "10mb",

@@ -1,6 +1,6 @@
 @import "tailwindcss";
-@source "../../node_modules/@directoryone/app";
-@source "../../node_modules/@directoryone/ui";
+@source "../../node_modules/@directoryone/app/dist";
+@source "../../node_modules/@directoryone/ui/dist";
 
 
 @theme {
