@@ -9,14 +9,14 @@ importers:
   .:
     dependencies:
       '@directoryone/app':
-        specifier: ^1.0.760
-        version: 1.0.760(next@15.5.15(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(postgres@3.4.9)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+        specifier: ^1.0.761
+        version: 1.0.761(next@15.5.15(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(postgres@3.4.9)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       '@directoryone/core':
-        specifier: ^1.0.760
-        version: 1.0.760(next@15.5.15(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+        specifier: ^1.0.761
+        version: 1.0.761(next@15.5.15(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       '@directoryone/ui':
-        specifier: ^1.0.760
-        version: 1.0.760(next@15.5.15(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+        specifier: ^1.0.761
+        version: 1.0.761(next@15.5.15(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       '@opentelemetry/api':
         specifier: ^1.9.1
         version: 1.9.1
@@ -168,20 +168,20 @@ packages:
     resolution: {integrity: sha512-4zBIxpPzowiZpusoFkyGVwakdRJUyuH5PxQ/PrqghfdFWWasvnCdPfQXHrenDai+gyLARulZjZowCOj6fjT4pA==}
     engines: {node: '>=6.9.0'}
 
-  '@directoryone/app@1.0.760':
-    resolution: {integrity: sha512-NxQ+qaF1Fwha1IYjbCMBOz7fsRoFl5mcrfx5NsMBs1tV0UhXTi1uGt5UcdjpEo4zFEZcATny+jwYWzkiPSDOtQ==, tarball: https://npm.pkg.github.com/download/@directoryone/app/1.0.760/39db693e46469d5dc6478b08c776a6153f75bc2d}
+  '@directoryone/app@1.0.761':
+    resolution: {integrity: sha512-UYkzZAFJ9Mjhiag4AcGIbPpX3vevMLM4xNWnrFVQczIjE7tPDWLCA2+9cq4hd3P81SPUde/oNqpxd7f82CU1qQ==, tarball: https://npm.pkg.github.com/download/@directoryone/app/1.0.761/dd385c035cb9a31ff11d4aa8f536d82ebbdcb25b}
     peerDependencies:
       next: '>=15.0.0'
       react: ^19.0.0
       react-dom: ^19.0.0
 
-  '@directoryone/core@1.0.760':
-    resolution: {integrity: sha512-jgg5J958DDZSjolst7U7YSWmU1Qoqp9xtyedQkyRuqiseU7224ZiRMGLztZJn7zR76CycLp6GUnVDYGx/wSKDQ==, tarball: https://npm.pkg.github.com/download/@directoryone/core/1.0.760/7e08784a65593b2c585e664d00bfc9026b4cc966}
+  '@directoryone/core@1.0.761':
+    resolution: {integrity: sha512-RrPLpr4Qtm9NoLvyH81Mc4uMv+nFhe6r+SLiGaOS6qDsVLVfvf4/S2jurc4gja4Fx5MMqF6r6zcghghv+0mK+A==, tarball: https://npm.pkg.github.com/download/@directoryone/core/1.0.761/daf4b2cb2698afc95b171edfd9e150ffa0c01e89}
     peerDependencies:
       next: '>=15.0.0'
 
-  '@directoryone/ui@1.0.760':
-    resolution: {integrity: sha512-ACLZvA8sRMQAdCNLdnjie3t3ZJLt9yDFeWPWwgukqprBa3I5rE+Ivoj9+LA+jxU8aMf8ZpKy6bk7S1zJ98K/9g==, tarball: https://npm.pkg.github.com/download/@directoryone/ui/1.0.760/4ab5cc06d0d70d0de2648bd5a9a525f7e220fd6b}
+  '@directoryone/ui@1.0.761':
+    resolution: {integrity: sha512-B92e6dFNiCx2B4pjhX9MjK5TzUPnnJ9bwRgQXQIQbesVMD44TieXuML/xejtUaDsaYHU30r0E4KYXhpUwobA4Q==, tarball: https://npm.pkg.github.com/download/@directoryone/ui/1.0.761/d171e54f7de3544a31e21db42f3192edeaf0352c}
     peerDependencies:
       next: '>=15.0.0'
       react: ^19.0.0
@@ -2456,10 +2456,10 @@ snapshots:
       '@babel/helper-string-parser': 7.29.7
       '@babel/helper-validator-identifier': 7.29.7
 
-  '@directoryone/app@1.0.760(next@15.5.15(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(postgres@3.4.9)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
+  '@directoryone/app@1.0.761(next@15.5.15(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(postgres@3.4.9)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
     dependencies:
-      '@directoryone/core': 1.0.760(next@15.5.15(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
-      '@directoryone/ui': 1.0.760(next@15.5.15(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@directoryone/core': 1.0.761(next@15.5.15(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@directoryone/ui': 1.0.761(next@15.5.15(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       '@opentelemetry/api': 1.9.1
       '@supabase/ssr': 0.6.1(@supabase/supabase-js@2.105.4)
       '@supabase/supabase-js': 2.105.4
@@ -2499,7 +2499,7 @@ snapshots:
       - sqlite3
       - ws
 
-  '@directoryone/core@1.0.760(next@15.5.15(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
+  '@directoryone/core@1.0.761(next@15.5.15(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
     dependencies:
       '@anthropic-ai/sdk': 0.91.1(zod@3.25.76)
       '@opentelemetry/api': 1.9.1
@@ -2547,9 +2547,9 @@ snapshots:
       - sqlite3
       - ws
 
-  '@directoryone/ui@1.0.760(next@15.5.15(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
+  '@directoryone/ui@1.0.761(next@15.5.15(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
     dependencies:
-      '@directoryone/core': 1.0.760(next@15.5.15(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@directoryone/core': 1.0.761(next@15.5.15(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       embla-carousel-react: 8.6.0(react@19.2.6)
       leaflet: 1.9.4
       lucide-react: 0.469.0(react@19.2.6)
