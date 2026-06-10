@@ -11,7 +11,7 @@
 
 import { resolve, relative, dirname } from "path";
 import { fileURLToPath } from "url";
-import { readFileSync, writeFileSync, existsSync, realpathSync } from "fs";
+import { readFileSync, writeFileSync, existsSync, realpathSync, mkdirSync } from "fs";
 
 // __dirname is Node 21.2+; fall back for Node 20 (Vercel default)
 const __dirname =
@@ -69,6 +69,44 @@ async function main() {
     }
   } catch (err) {
     console.warn("Could not sync globals.css:", err);
+  }
+
+  // Sync route shims from @directoryone/app's route manifest. New platform
+  // routes only ship as package exports; each spawn needs a thin re-export at
+  // src/app/<path> or the route 404s. Creating any missing shim here lets new
+  // routes self-heal on the next update instead of needing a manual push per
+  // spawn. (Format mirrors the spawn-time generator, incl. the init import for
+  // route handlers and the auth callback page.)
+  try {
+    const manifestPath = resolve(
+      __dirname,
+      "../node_modules/@directoryone/app/dist/route-manifest.json"
+    );
+    if (existsSync(manifestPath)) {
+      const manifest: Array<{ path: string; from: string; exports: string[] }> =
+        JSON.parse(readFileSync(manifestPath, "utf-8"));
+      const appDir = resolve(__dirname, "../src/app");
+      const created: string[] = [];
+      for (const entry of manifest) {
+        const target = resolve(appDir, entry.path);
+        if (existsSync(target)) continue;
+        const needsInit =
+          entry.path.endsWith("route.ts") ||
+          entry.path === "auth/callback/page.tsx";
+        const initLine = needsInit ? `import "@/lib/init";\n` : "";
+        const content = `${initLine}export { ${entry.exports.join(", ")} } from "${entry.from}";\n`;
+        mkdirSync(dirname(target), { recursive: true });
+        writeFileSync(target, content);
+        created.push(entry.path);
+      }
+      if (created.length > 0) {
+        console.log(
+          `Created ${created.length} missing route shim(s): ${created.join(", ")}`
+        );
+      }
+    }
+  } catch (err) {
+    console.warn("Could not sync route shims (non-fatal):", err);
   }
 
   const databaseUrl = process.env.DATABASE_URL;
