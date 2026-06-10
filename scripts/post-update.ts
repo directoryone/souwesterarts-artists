@@ -11,7 +11,16 @@
 
 import { resolve, relative, dirname } from "path";
 import { fileURLToPath } from "url";
-import { readFileSync, writeFileSync, existsSync, realpathSync, mkdirSync } from "fs";
+import {
+  readFileSync,
+  writeFileSync,
+  existsSync,
+  realpathSync,
+  mkdirSync,
+  readdirSync,
+  rmSync,
+  rmdirSync,
+} from "fs";
 
 // __dirname is Node 21.2+; fall back for Node 20 (Vercel default)
 const __dirname =
@@ -102,6 +111,58 @@ async function main() {
       if (created.length > 0) {
         console.log(
           `Created ${created.length} missing route shim(s): ${created.join(", ")}`
+        );
+      }
+
+      // Prune orphaned shims: delete generated re-export shims whose route was
+      // removed from the manifest, so removals self-heal too. Guarded tightly —
+      // only files named page.tsx/route.ts whose ENTIRE content matches the
+      // generated shim shape (a re-export from @directoryone/app, optionally
+      // preceded by the init import) and that aren't in the manifest. Anything
+      // customized, app-local, or re-exporting from a different package (e.g.
+      // error.tsx → @directoryone/ui) never matches and is left untouched.
+      const manifestTargets = new Set(
+        manifest.map((e) => resolve(appDir, e.path))
+      );
+      const shimRe =
+        /^(?:import "@\/lib\/init";\s*)?export \{[^}]*\} from "@directoryone\/app\/[^"]+";\s*$/;
+      const removed: string[] = [];
+      const prune = (dir: string) => {
+        for (const ent of readdirSync(dir, { withFileTypes: true })) {
+          const full = resolve(dir, ent.name);
+          if (ent.isDirectory()) {
+            prune(full);
+            try {
+              if (readdirSync(full).length === 0) rmdirSync(full);
+            } catch {
+              // dir not empty or already gone — leave it
+            }
+          } else if (
+            ent.isFile() &&
+            (ent.name === "page.tsx" || ent.name === "route.ts") &&
+            !manifestTargets.has(full)
+          ) {
+            let body = "";
+            try {
+              body = readFileSync(full, "utf-8").trim();
+            } catch {
+              continue;
+            }
+            if (shimRe.test(body)) {
+              try {
+                rmSync(full);
+                removed.push(relative(appDir, full));
+              } catch {
+                // best-effort
+              }
+            }
+          }
+        }
+      };
+      if (existsSync(appDir)) prune(appDir);
+      if (removed.length > 0) {
+        console.log(
+          `Removed ${removed.length} orphaned route shim(s): ${removed.join(", ")}`
         );
       }
     }
