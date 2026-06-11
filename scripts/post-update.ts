@@ -95,10 +95,48 @@ async function main() {
       const manifest: Array<{ path: string; from: string; exports: string[] }> =
         JSON.parse(readFileSync(manifestPath, "utf-8"));
       const appDir = resolve(__dirname, "../src/app");
+
+      // Inventory existing generated shims first (file → its re-export source).
+      // Spawns may relocate a shim to a config-driven custom path (e.g.
+      // case-studies served at /great-work), so a shim's PATH is not what makes
+      // it valid — its import target is. Only files named page.tsx/route.ts
+      // whose ENTIRE content matches the generated shim shape (a re-export from
+      // @directoryone/app, optionally preceded by the init import) count;
+      // anything customized, app-local, or re-exporting from a different
+      // package (e.g. error.tsx → @directoryone/ui) is never touched.
+      const shimRe =
+        /^(?:import "@\/lib\/init";\s*)?export \{[^}]*\} from "(@directoryone\/app\/[^"]+)";\s*$/;
+      const shimFiles: Array<{ full: string; source: string }> = [];
+      const collect = (dir: string) => {
+        for (const ent of readdirSync(dir, { withFileTypes: true })) {
+          const full = resolve(dir, ent.name);
+          if (ent.isDirectory()) {
+            collect(full);
+          } else if (
+            ent.isFile() &&
+            (ent.name === "page.tsx" || ent.name === "route.ts")
+          ) {
+            let body = "";
+            try {
+              body = readFileSync(full, "utf-8").trim();
+            } catch {
+              continue;
+            }
+            const m = body.match(shimRe);
+            if (m) shimFiles.push({ full, source: m[1] });
+          }
+        }
+      };
+      if (existsSync(appDir)) collect(appDir);
+      const shimmedSources = new Set(shimFiles.map((s) => s.source));
+
+      // Create missing shims — but skip routes already shimmed at a custom
+      // path, so we don't resurrect the default-path twin of a renamed route.
       const created: string[] = [];
       for (const entry of manifest) {
         const target = resolve(appDir, entry.path);
         if (existsSync(target)) continue;
+        if (shimmedSources.has(entry.from)) continue;
         const needsInit =
           entry.path.endsWith("route.ts") ||
           entry.path === "auth/callback/page.tsx";
@@ -114,52 +152,33 @@ async function main() {
         );
       }
 
-      // Prune orphaned shims: delete generated re-export shims whose route was
-      // removed from the manifest, so removals self-heal too. Guarded tightly —
-      // only files named page.tsx/route.ts whose ENTIRE content matches the
-      // generated shim shape (a re-export from @directoryone/app, optionally
-      // preceded by the init import) and that aren't in the manifest. Anything
-      // customized, app-local, or re-exporting from a different package (e.g.
-      // error.tsx → @directoryone/ui) never matches and is left untouched.
-      const manifestTargets = new Set(
-        manifest.map((e) => resolve(appDir, e.path))
-      );
-      const shimRe =
-        /^(?:import "@\/lib\/init";\s*)?export \{[^}]*\} from "@directoryone\/app\/[^"]+";\s*$/;
+      // Prune orphaned shims: a shim is orphaned only when its re-export
+      // TARGET left the manifest (the package no longer exports that route, so
+      // the build would fail with "Module not found"). A shim at a non-manifest
+      // path whose target still exists is a deliberate path customization and
+      // is kept.
+      const manifestSources = new Set(manifest.map((e) => e.from));
       const removed: string[] = [];
-      const prune = (dir: string) => {
-        for (const ent of readdirSync(dir, { withFileTypes: true })) {
-          const full = resolve(dir, ent.name);
-          if (ent.isDirectory()) {
-            prune(full);
-            try {
-              if (readdirSync(full).length === 0) rmdirSync(full);
-            } catch {
-              // dir not empty or already gone — leave it
-            }
-          } else if (
-            ent.isFile() &&
-            (ent.name === "page.tsx" || ent.name === "route.ts") &&
-            !manifestTargets.has(full)
-          ) {
-            let body = "";
-            try {
-              body = readFileSync(full, "utf-8").trim();
-            } catch {
-              continue;
-            }
-            if (shimRe.test(body)) {
-              try {
-                rmSync(full);
-                removed.push(relative(appDir, full));
-              } catch {
-                // best-effort
-              }
-            }
-          }
+      for (const { full, source } of shimFiles) {
+        if (manifestSources.has(source)) continue;
+        try {
+          rmSync(full);
+          removed.push(relative(appDir, full));
+        } catch {
+          // best-effort
         }
-      };
-      if (existsSync(appDir)) prune(appDir);
+        // Sweep now-empty parent directories up to appDir.
+        let parent = dirname(full);
+        while (parent.startsWith(appDir) && parent !== appDir) {
+          try {
+            if (readdirSync(parent).length > 0) break;
+            rmdirSync(parent);
+          } catch {
+            break;
+          }
+          parent = dirname(parent);
+        }
+      }
       if (removed.length > 0) {
         console.log(
           `Removed ${removed.length} orphaned route shim(s): ${removed.join(", ")}`
