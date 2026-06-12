@@ -2,5 +2,11 @@
   "installCommand": "pnpm install --no-frozen-lockfile",
   "regions": [
     "pdx1"
+  ],
+  "crons": [
+    {
+      "path": "/api/cron/draft-reminder",
+      "schedule": "0 14 * * *"
+    }
   ]
 }
