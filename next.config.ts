@@ -12,6 +12,9 @@ const nextConfig: NextConfig = {
     // / "Out of Memory", and a dead build is silent: the repo takes the version
     // bump, the build fails, and the site keeps serving the previous release.
     memoryBasedWorkersCount: true,
+    // Lowers webpack's peak memory during compile. great-work-guild OOM'd twice
+    // in a row on v1.0.960 after flipbooks added pdf.js to the client bundle.
+    webpackMemoryOptimizations: true,
   },
   async rewrites() {
     return [
