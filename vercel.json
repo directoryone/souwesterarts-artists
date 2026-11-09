@@ -12,5 +12,147 @@
       "path": "/api/cron/upsell-reminders",
       "schedule": "0 15 * * *"
     }
+  ],
+  "redirects": [
+    {
+      "source": "/categories/visual",
+      "destination": "/categories/visual-arts",
+      "permanent": true
+    },
+    {
+      "source": "/best-visual-in/:path*",
+      "destination": "/best-visual-arts-in/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/categories/literature",
+      "destination": "/categories/literary-arts",
+      "permanent": true
+    },
+    {
+      "source": "/best-literature-in/:path*",
+      "destination": "/best-literary-arts-in/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/categories/performance",
+      "destination": "/categories/performing-arts",
+      "permanent": true
+    },
+    {
+      "source": "/best-performance-in/:path*",
+      "destination": "/best-performing-arts-in/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/categories/audio",
+      "destination": "/categories/performing-arts",
+      "permanent": true
+    },
+    {
+      "source": "/best-audio-in/:path*",
+      "destination": "/best-performing-arts-in/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/categories/social-practice",
+      "destination": "/categories/interactive-social-practice",
+      "permanent": true
+    },
+    {
+      "source": "/best-social-practice-in/:path*",
+      "destination": "/best-interactive-social-practice-in/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/categories/environmental-natural",
+      "destination": "/categories/place-based",
+      "permanent": true
+    },
+    {
+      "source": "/best-environmental-natural-in/:path*",
+      "destination": "/best-place-based-in/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/categories/textile-fiber",
+      "destination": "/categories/applied-decorative-arts",
+      "permanent": true
+    },
+    {
+      "source": "/best-textile-fiber-in/:path*",
+      "destination": "/best-applied-decorative-arts-in/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/categories/fashion",
+      "destination": "/categories/applied-decorative-arts",
+      "permanent": true
+    },
+    {
+      "source": "/best-fashion-in/:path*",
+      "destination": "/best-applied-decorative-arts-in/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/categories/craft",
+      "destination": "/categories/applied-decorative-arts",
+      "permanent": true
+    },
+    {
+      "source": "/best-craft-in/:path*",
+      "destination": "/best-applied-decorative-arts-in/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/categories/film-video",
+      "destination": "/categories/digital",
+      "permanent": true
+    },
+    {
+      "source": "/best-film-video-in/:path*",
+      "destination": "/best-digital-in/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/tags/weaving",
+      "destination": "/tags/textiles",
+      "permanent": true
+    },
+    {
+      "source": "/tags/dyeing",
+      "destination": "/tags/textiles",
+      "permanent": true
+    },
+    {
+      "source": "/tags/sewing",
+      "destination": "/tags/textiles",
+      "permanent": true
+    },
+    {
+      "source": "/tags/movie-television-scripts",
+      "destination": "/tags/scripts",
+      "permanent": true
+    },
+    {
+      "source": "/tags/plays",
+      "destination": "/tags/scripts",
+      "permanent": true
+    },
+    {
+      "source": "/tags/personal-essays",
+      "destination": "/tags/personal-essay-memoir",
+      "permanent": true
+    },
+    {
+      "source": "/tags/memoirs",
+      "destination": "/tags/personal-essay-memoir",
+      "permanent": true
+    },
+    {
+      "source": "/tags/speeches",
+      "destination": "/listings",
+      "permanent": true
+    }
   ]
 }
