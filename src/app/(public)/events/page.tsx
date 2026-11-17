@@ -1,1 +1,1 @@
-export { default, metadata } from "@directoryone/app/routes/public/events";
+export { default, generateMetadata } from "@directoryone/app/routes/public/events";
